@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <title>Completer Portfolio Pracitice</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        color: white;
+    }
+
+    body {
+        background-color: black;
+        font-family: Arial, sans-serif;
+    }
+
+
+
+    .menu {
+        position: relative;
+        text-align: center;
+    }
+
+    .nav {
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: opacity 1s ease-out, height 1s ease-out;
+    }
+
+    .nav.active {
+        opacity: 1;
+        height: 180px;
+    }
+
+    .nav ul {
+        margin-top: 20px;
+    }
+
+    .nav ul li {
+        padding: 10px;
+    }
+
+    .menu i {
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    /* Bio styles */
+    .bio {
+        margin-top: 50px;
+    }
+
+    /* Photo styles */
+    .photo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .photo img {
+        height: auto;
+        width: 100%;
+        max-width: 300px;
+        border-radius: 50%;
+    }
+
+    /* Heading styles */
+    .heading {
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    /* About styles */
+    .about {
+        padding: 10px;
+    }
+
+    .about h4 {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .about .para {
+        margin: auto;
+        padding-top: 10px;
+        height: 180px;
+        width: 70%;
+    }
+
+    .about .para p {
+        text-align: justify;
+    }
+
+    /* Social styles */
+    .social {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .social i {
+        font-size: 25px;
+        margin: 0 5px;
+    }
+
+    /* Main text styles */
+    .main-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-text .div1,
+    .main-text .div2 {
+        padding: 10px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .main-text .div2 p {
+        margin-top: 10px;
+        text-align: justify;
+    }
+
+    /* Bold heading styles */
+    .bold-heading {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .bold-heading p {
+        padding: 10px;
+    }
+
+    .bold-heading i {
+        font-size: 35px;
+    }
+
+    /* View design styles */
+    .view-design {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .view-design h4 {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .images {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .images img {
+        height: 210px;
+        width: 100%;
+        border-radius: 20px;
+        max-width: 200px;
+        padding: 5px;
+    }
+
+    /* Learn more button styles */
+    .learn-more {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .learn-more button {
+        font-weight: bold;
+        font-size: 16px;
+        padding: 10px 20px;
+        color: black;
+        margin-top: 10px;
+    }
+
+    /* Bold text styles */
+    .bold-text {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .bold-text .text1,
+    .bold-text .text2 {
+        width: 70%;
+        margin: auto;
+        padding: 10px;
+    }
+
+    .bold-text .highlight-text {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    /* Contact styles */
+    .contact {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .contact .info,
+    .contact .nmbr {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .contact .cont-img img {
+        height: auto;
+        width: 100%;
+        max-width: 300px;
+        border-radius: 50%;
+    }
+
+    /* Location styles */
+    .location {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .location h4 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    /* Last text styles */
+    .last-text {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .last-text p {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    @media only screen and (max-width: 700px) {
+
+        /* Your responsive styles for screens with a maximum width of 600 pixels */
+        .about .para {
+            margin: 0;
+            padding-top: 10px;
+            height: 200px;
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: 480px) {
+
+/* Your responsive styles for screens with a maximum width of 380 pixels */
+.about .para {
+  
+    height: 310px;
+    width: 100%;
+}
+}
+
+    @media only screen and (max-width: 380px) {
+
+        /* Your responsive styles for screens with a maximum width of 380 pixels */
+        .about .para {
+            margin: 0;
+            padding-top: 10px;
+            height: 370px;
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <div class="menu">
+        <i id="barsIcon" class="fas fa-bars"></i>
+        <div class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bio">
+        <div class="heading">Biography</div>
+        <div class="photo"><img src="/photos/istockphoto-1369508766-170667a.webp" alt=""></div>
+    </div>
+    <div class="about">
+        <h4>Aliya Ali</h4>
+        <div class="para">
+            <p>Article evident arrived express highest men did boy. Mistress sensible entirely am so. Quick can manor
+                smart money hopes worth too. Comfort produce husband boy her had hearing. Sit amet massa vitae tortor
+                condimentum lacinia quis. Ornare arcu dui vivamus arcu felis bibendum ut. Consectetur adipiscing elit
+                duis tristique sollicitudin. Volutpat lacus laoreet non curabitur. Magna fringilla urna porttitor
+                rhoncus. Ultricies leo integer malesuada nunc vel risus commodo viverra. Ipsum a arcu cursus vitae
+                congue. Imperdiet dui accumsan sit amet nulla facilisi. Tincidunt dui ut ornare lectus sit. Phasellus
+                faucibus scelerisque eleifend donec pretium vulputate sapien nec. Eget gravida cum sociis natoque.
+            </p>
+        </div>
+        <div class="social">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+    </div>
+    <div class="main-text">
+        <div class="div1">
+            <p>We collaborate with brands and agencies to create memorable experiences.</p>
+            SAMPLE HEADLINE
+        </div>
+        <div class="div2">
+            <h6>We dwelling elegance do shutters appetite yourself diverted.</h6>
+            <p>The principal reason we continue to adapt and evolve our business model is to ensure that we are meeting
+                our customers’ expectations. One example of this has been to use modern technology and the introduction
+                of the real time tracking our teams using GPS. This ensures our customers get the time they have paid
+                for has been spent at our customers’ homes since this is the most common problem within our industry.
+            </p>
+        </div>
+
+    </div>
+    <div class="line"></div>
+    <div class="bold-heading">
+        <p> We design People Inspired Experiences that create positive change in people's lives.</p>
+        <i class="fas fa-arrow-down"></i>
+
+
+    </div>
+    <div class="view-design">
+        <h4>View Design</h4>
+        <div class="images">
+            <img src="/photos/photo-1589363358751-ab05797e5629.avif" alt="">
+            <img src="/photos/premium_photo-1683120892366-7f75f6e612ff.avif" alt="">
+            <img src="/photos/photo-1573496130141-209d200cebd8.avif" alt="">
+            <img src="/photos/photo-1584273143981-41c073dfe8f8.avif" alt="">
+            <img src="/photos/photo-1552664730-d307ca884978.avif" alt="">
+            <img src="/photos/istockphoto-912338074-612x612.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="learn-more">
+        <button>Learn More</button>
+    </div>
+    <div class="bold-text">
+        <div class="text1">
+            <div class="highlight-text">Bring to the table win-win survival strategies to ensure proactive domination.
+                At the end of the day, going forward, a new normal that has evolved from generation X is on the runway
+                heading towards a streamlined cloud solution. </div>
+            <p>Living Life Tomorrow's fate, though thou be wise, Thou canst not tell nor yet surmise; Pass, therefore,
+                not today in vain, For it will never come again. You know, my friends, with what a brave carouse I made
+                a Second Marriage in my house; favored old barren reason from my bed, and took the daughter of the vine
+                to spouse. The Worldly Hope men set their Hearts upon Turns Ashes - or it prospers; and anon, Like Snow
+                upon the Desert's dusty Face, Lighting a little hour or two - is gone.</p>
+        </div>
+        <div class="text2">
+            <p>Living Life Tomorrow's fate, though thou be wise, Thou canst not tell nor yet surmise; Pass, therefore,
+                not today in vain, For it will never come again. You know, my friends, with what a brave carouse I made
+                a Second Marriage in my house; favored old barren reason from my bed, and took the daughter of the vine
+                to spouse. The Worldly Hope men set their Hearts upon Turns Ashes - or it prospers; and anon, Like Snow
+                upon the Desert's dusty Face, Lighting a little hour or two - is gone.
+            </p>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="info">We are information security.</div>
+        <div class="nmbr">809543674398798 </div>
+        <div class="cont-img"><img src="/photos/download.jpeg" alt=""></div>
+    </div>
+    <div class="location">
+        <h4>location</h4>
+        <div class="location-text">
+            <div class="location1">121 Rock Sreet, 21 Avenue,
+                New York, NY 92103-9000
+            </div>
+        </div>
+    </div>
+    <div class="last-text">© 2024 Anonymous Ghost. All rights reserved.
+    </div>
+
+    <script>
+        //script start
+        document.addEventListener("DOMContentLoaded", function () {
+            var barsIcon = document.getElementById("barsIcon");
+            var nav = document.querySelector(".nav");
+
+            barsIcon.addEventListener("click", function () {
+                nav.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+
+</html>
