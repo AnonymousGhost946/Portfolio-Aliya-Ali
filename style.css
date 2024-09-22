@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+
+
+.menu {
+    position: relative;
+    text-align: center;
+}
+
+.nav {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 1s ease-out, height 1s ease-out;
+}
+
+.nav.active {
+    opacity: 1;
+    height: 180px;
+}
+
+.nav ul {
+    margin-top: 20px;
+}
+
+.nav ul li {
+    padding: 10px;
+}
+
+.menu i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Bio styles */
+.bio {
+    margin-top: 50px;
+}
+
+/* Photo styles */
+.photo {
+    display: flex;
+    justify-content: center;
+}
+
+.photo img {
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+}
+
+/* Heading styles */
+.heading {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.about {
+    padding: 10px;
+}
+
+.about h4 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.about .para {
+    margin: auto;
+    padding-top: 10px;
+    height: 180px;
+    width: 70%;
+}
+
+.about .para p {
+    text-align: justify;
+}
+
+
+.social {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social i {
+    font-size: 25px;
+    margin: 0 5px;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-text .div1,
+.main-text .div2 {
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.main-text .div2 p {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+/* Bold heading styles */
+.bold-heading {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.bold-heading p {
+    padding: 10px;
+}
+
+.bold-heading i {
+    font-size: 35px;
+}
+
+/* View design styles */
+.view-design {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.view-design h4 {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.images {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.images img {
+    height: 210px;
+    width: 100%;
+    border-radius: 20px;
+    max-width: 200px;
+    padding: 5px;
+}
+
+/* Learn more button styles */
+.learn-more {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.learn-more button {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    color: black;
+    margin-top: 10px;
+}
+
+/* Bold text styles */
+.bold-text {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.bold-text .text1,
+.bold-text .text2 {
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+}
+
+.bold-text .highlight-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Contact styles */
+.contact {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact .info,
+.contact .nmbr {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contact .cont-img img {
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+}
+
+/* Location styles */
+.location {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.location h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Last text styles */
+.last-text {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.last-text p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+
+    /* Your responsive styles for screens with a maximum width of 600 pixels */
+    .about .para {
+        margin: 0;
+        padding-top: 10px;
+        height: 200px;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 480px) {
+
+/* Your responsive styles for screens with a maximum width of 380 pixels */
+.about .para {
+
+height: 310px;
+width: 100%;
+}
+}
+
+@media only screen and (max-width: 380px) {
+
+    /* Your responsive styles for screens with a maximum width of 380 pixels */
+    .about .para {
+        margin: 0;
+        padding-top: 10px;
+        height: 370px;
+        width: 100%;
+    }
+}
